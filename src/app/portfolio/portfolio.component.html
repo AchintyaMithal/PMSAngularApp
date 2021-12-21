@@ -1,0 +1,40 @@
+<nav class="navbar navbar-dark bg-dark">
+  <a class="navbar-brand text-white">Portfolio Management System</a>
+  <button class="btn btn-danger my-2 my-sm-0" (click)="onLogout()">Logout</button>
+</nav>
+<h1>{{UserData.netWorth}}</h1>
+<table>
+  <tr>
+    <th>Stock Name</th>
+    <th>Stock Count</th>
+  </tr>
+  <tr *ngFor = "let u of UserData.stockList">
+    
+      
+      <td>{{u.stockName}}</td>
+      <td>{{u.stockCount}}</td>
+      <td>
+        <button class="btn btn-lg btn-block" id="sellS" value={{u.stockName}} (click)="onSellStock()" >Sell</button>
+      </td>
+    
+
+  </tr>
+</table>
+<table>
+  <tr>
+    <th>Mutual Fund Name</th>
+    <th>Mutual Fund Count</th>
+  </tr>
+  <tr *ngFor = "let u of UserData.mutualFundList">
+    
+      
+      <td>{{u.mutualFundName}}</td>
+      <td>{{u.mutualFundUnits}}</td>
+      <td>
+        <button class="btn btn-lg btn-block" id="sellM" value={{u.mutualFundName}} (click)="onSellMutualFund()" >Sell</button>
+      </td>
+      
+    
+
+  </tr>
+</table>
