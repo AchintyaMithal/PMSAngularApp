@@ -50,13 +50,15 @@ Sl:any=[];
     this.router.navigate(['/user/login']);
   }
   
-  onSellStock(){
+  onSellStock(value:any){
+    //alert(value)
+
     var str = (<HTMLInputElement>document.getElementById("sellS")).value; 
     console.log(str);
     
     this.Sl={
       assetType: "Stock",
-      assetName:str,
+      assetName:value,
       portFolioId : localStorage.getItem("portfolioId")
     }
     this.service.sellStocks(this.Sl).subscribe(data=>{
@@ -69,12 +71,12 @@ Sl:any=[];
      this.router.navigateByUrl('/home')
   }
        
-  onSellMutualFund(){
+  onSellMutualFund(value : any){
     var str = (<HTMLInputElement>document.getElementById("sellM")).value; 
     console.log(str);
     this.Sl={
       assetType: "MutualFund",
-      assetName:str,
+      assetName:value,
       portFolioId : localStorage.getItem("portfolioId")
     }
     this.service.sellMutual(this.Sl).subscribe(data=>{

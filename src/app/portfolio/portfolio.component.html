@@ -14,7 +14,7 @@
       <td>{{u.stockName}}</td>
       <td>{{u.stockCount}}</td>
       <td>
-        <button class="btn btn-lg btn-block" id="sellS" value={{u.stockName}} (click)="onSellStock()" >Sell</button>
+        <button class="btn btn-lg btn-block" id="sellS"  (click)="onSellStock(u.stockName)" >Sell</button>
       </td>
     
 
@@ -31,7 +31,7 @@
       <td>{{u.mutualFundName}}</td>
       <td>{{u.mutualFundUnits}}</td>
       <td>
-        <button class="btn btn-lg btn-block" id="sellM" value={{u.mutualFundName}} (click)="onSellMutualFund()" >Sell</button>
+        <button class="btn btn-lg btn-block" id="sellM"  (click)="onSellMutualFund(u.mutualFundName)" >Sell</button>
       </td>
       
     
