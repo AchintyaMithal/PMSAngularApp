@@ -24,7 +24,8 @@ export class HomeComponent implements OnInit {
     );*/
     
   }
-  
+  userId= localStorage.getItem("portfolioId")
+  customerName= localStorage.getItem("customerName")
 
   onLogout() {
     localStorage.removeItem('token');
