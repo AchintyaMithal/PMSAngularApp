@@ -53,8 +53,8 @@ Sl:any=[];
   onSellStock(value:any){
     //alert(value)
 
-    var str = (<HTMLInputElement>document.getElementById("sellS")).value; 
-    console.log(str);
+    //var str = (<HTMLInputElement>document.getElementById("sellS")).value; 
+   // console.log(str);
     
     this.Sl={
       assetType: "Stock",
@@ -79,6 +79,7 @@ Sl:any=[];
       assetName:value,
       portFolioId : localStorage.getItem("portfolioId")
     }
+   // alert("Do you want to sell "{value})
     this.service.sellMutual(this.Sl).subscribe(data=>{
       //debugger;
       this.dd = data;

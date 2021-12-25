@@ -4,14 +4,8 @@
     <button class="btn btn-danger my-2 my-sm-0" (click)="onLogout()">Logout</button>
   </nav>
   
-  <div class="card m-5" style="width:18rem" *ngIf="userDetails">
-    <ul class="list-group">
-      <li class="list-group-item"><strong>Username : </strong>k</li>
-      <li class="list-group-item"><strong>FullName : </strong>{{userDetails.fullName}}</li>
-      <li class="list-group-item"><strong>Email : </strong>{{userDetails.email}}</li>
-    </ul>
-  </div>
-  <div class="form-row">
+  
+  
     <div class="form-group col-md-8 offset-md-2">
       <button class="btn btn-lg btn-block" (click)="onGetNetWorth()">GetNetWorth</button>
     </div>
