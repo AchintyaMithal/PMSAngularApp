@@ -2,39 +2,65 @@
   <a class="navbar-brand text-white">Portfolio Management System</a>
   <button class="btn btn-danger my-2 my-sm-0" (click)="onLogout()">Logout</button>
 </nav>
-<h1>{{UserData.netWorth}}</h1>
-<table>
-  <tr>
-    <th>Stock Name</th>
-    <th>Stock Count</th>
-  </tr>
-  <tr *ngFor = "let u of UserData.stockList">
+<div class="tbl-header">
+  <table cellpadding="0" cellspacing="0" border="0">
+  <thead >
+    <tr>
+      <th scope="col">Stock Name</th>
+      <th scope="col">Stock Count</th>
+      <th scope="col" ></th>
+    </tr>
+  </thead>
+  </table>
+</div>
+  
+<div class="tbl-content">
+  <table cellpadding="0" cellspacing="0" border="0">
+  <tbody>
+    <tr *ngFor = "let u of UserData.stockList">
     
       
-      <td>{{u.stockName}}</td>
+      <td cope="row">{{u.stockName}}</td>
       <td>{{u.stockCount}}</td>
       <td>
-        <button class="btn btn-lg btn-block" id="sellS"  (click)="onSellStock(u.stockName)" >Sell</button>
+        <button class="btn btn-lg btn-block"   style="background-color: yellowgreen;"  id="sellS"  (click)="onSellStock(u.stockName)" >Sell</button>
       </td>
     
 
   </tr>
+  </tbody>
+  
+  
 </table>
-<table>
-  <tr>
-    <th>Mutual Fund Name</th>
-    <th>Mutual Fund Count</th>
-  </tr>
-  <tr *ngFor = "let u of UserData.mutualFundList">
+</div>
+<div class="tbl-header">
+  <table cellpadding="0" cellspacing="0" border="0">
+
+  <thead >
+    <tr>
+      <th scope="col" >Mutual Fund Name</th>
+      <th scope="col">Mutual Fund Count</th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+</table>
+</div>
+  <div class="tbl-content">
+    <table cellpadding="0" cellspacing="0" border="0">
+  <tbody>
+    <tr *ngFor = "let u of UserData.mutualFundList">
     
       
-      <td>{{u.mutualFundName}}</td>
+      <td cope="row">{{u.mutualFundName}}</td>
       <td>{{u.mutualFundUnits}}</td>
       <td>
-        <button class="btn btn-lg btn-block" id="sellM"  (click)="onSellMutualFund(u.mutualFundName)" >Sell</button>
+        <button class="btn btn-lg btn-block"  style="background-color: yellowgreen;" id="sellM"  (click)="onSellMutualFund(u.mutualFundName)" >Sell</button>
       </td>
       
     
 
   </tr>
+  </tbody>
 </table>
+</div>
+<h1 style="text-align: center;  font-family:'Courier New', Courier, monospace">Total Networth : {{UserData.netWorth}}</h1>

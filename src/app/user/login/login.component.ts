@@ -29,7 +29,8 @@ export class LoginComponent implements OnInit {
     this.service.login(form.value).subscribe(
       (res: any) => {
         localStorage.setItem('token', res.tokenString);
-        localStorage.setItem('portfolioId',res.portfolioId );
+        localStorage.setItem('portfolioId',res.portfolioId )
+        localStorage.setItem('customerName',res.customerName )
         this.router.navigateByUrl('/home');
       },
       err => {
