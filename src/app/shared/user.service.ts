@@ -11,8 +11,8 @@ import {throwError} from 'rxjs';
 export class UserService {
 
   constructor(private fb: FormBuilder, private http: HttpClient) { }
-  readonly BaseURI = 'https://localhost:44316/api';
-  readonly burl = "http://localhost:27004/api/CalculateNetWorth/netWorth?portFolioId="
+  readonly BaseURI = 'https://authapid.azurewebsites.net/api';
+  readonly burl = "https://calculatenetworthapifinal.azurewebsites.net/api/CalculateNetWorth/netWorth?portFolioId="
 
   /*formModel = this.fb.group({
     UserName: ['', Validators.required],
@@ -47,13 +47,13 @@ export class UserService {
  sellStocks(s: any){
    
     
-    return this.http.post('http://localhost:27004/api/CalculateNetWorth/sellAsset',s);
+    return this.http.post('https://calculatenetworthapifinal.azurewebsites.net/api/CalculateNetWorth/sellAsset',s);
 
   }
   sellMutual(s: any){
    
     
-    return this.http.post('http://localhost:27004/api/CalculateNetWorth/sellAsset',s);
+    return this.http.post('https://calculatenetworthapifinal.azurewebsites.net/api/CalculateNetWorth/sellAsset',s);
 
   }
 }

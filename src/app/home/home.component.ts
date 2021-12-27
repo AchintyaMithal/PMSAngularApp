@@ -22,7 +22,7 @@ export class HomeComponent implements OnInit {
         console.log(err);
       },
     );*/
-    
+    document.body.className = "sel";
   }
   userId= localStorage.getItem("portfolioId")
   customerName= localStorage.getItem("customerName")

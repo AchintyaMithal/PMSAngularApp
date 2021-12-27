@@ -25,6 +25,7 @@ Sl:any=[];
    }
 
   ngOnInit() {
+    document.body.className = "selp";
     this.service.getNetWorth().subscribe(data=>{
       //debugger;
       this.UserData = data;

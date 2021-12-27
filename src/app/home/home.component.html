@@ -4,16 +4,17 @@
     <button class="btn btn-danger my-2 my-sm-0" (click)="onLogout()">Logout</button>
   </nav>
   
-  
-  <div  class="form-details" >
-  <div class="form-div">
+  <img src="/assets/img/single_user.png" style="float: left; padding-top: 20px;padding-left: 20px;">
+  <div class="form-div" style="padding-bottom: 100px;">
     
-    <strong style="font-size: 60px;">Portfolio Id : {{userId}} </strong><br>
-    <strong style="font-size: 60px;">Username    : {{customerName}}</strong>
+    <strong style="font-size: 30px;  padding-bottom: 20px; padding-left: 60px;" >Portfolio Id : {{userId}} </strong><br>
+    <strong style="font-size: 30px;  padding-top: 20px; padding-left: 60px;">Username : {{customerName}}</strong>
+
     
   </div>
+  <hr>
   <div class="form-div-div" >
     <div class="form-group col-md-8 offset-md-2">
-      <button  style="height: 80px; width: 200px; border-radius: 2em;" class="btn btn-lg btn-primary" (click)="onGetNetWorth()">GetNetWorth</button>
+      <button  style="height: 80px; width: 200px; border-radius: 2em; " class="btn btn-lg btn-primary" (click)="onGetNetWorth()">GetNetWorth</button>
     </div>
   </div>
