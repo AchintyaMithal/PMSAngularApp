@@ -12,7 +12,7 @@ export class UserService {
 
   constructor(private fb: FormBuilder, private http: HttpClient) { }
   readonly BaseURI = 'https://authapid.azurewebsites.net/api';
-  readonly burl = "https://calculatenetworthapifinal.azurewebsites.net/api/CalculateNetWorth/netWorth?portFolioId="
+  readonly burl = "https://calculatenetworthapif.azurewebsites.net/api/CalculateNetWorth/netWorth?portFolioId="
 
   /*formModel = this.fb.group({
     UserName: ['', Validators.required],
@@ -29,6 +29,7 @@ export class UserService {
   
 
   login(formData: any) {
+    console.log("Data being sent to authorisation api");
     return this.http.post(this.BaseURI + '/Authenticate/login', formData);
   }
 
@@ -36,6 +37,7 @@ export class UserService {
     return this.http.get(this.BaseURI + '/UserProfile');
   }
   getNetWorth(){
+    console.log("id of the user being sent to getnetworth api..")
      
     var id = localStorage.getItem("portfolioId");
     console.log(id);
@@ -47,13 +49,13 @@ export class UserService {
  sellStocks(s: any){
    
     
-    return this.http.post('https://calculatenetworthapifinal.azurewebsites.net/api/CalculateNetWorth/sellAsset',s);
+    return this.http.post('https://calculatenetworthapif.azurewebsites.net/api/CalculateNetWorth/sellAsset',s);
 
   }
   sellMutual(s: any){
    
     
-    return this.http.post('https://calculatenetworthapifinal.azurewebsites.net/api/CalculateNetWorth/sellAsset',s);
+    return this.http.post('https://calculatenetworthapif.azurewebsites.net/api/CalculateNetWorth/sellAsset',s);
 
   }
 }

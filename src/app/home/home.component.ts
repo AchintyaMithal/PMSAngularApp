@@ -14,14 +14,7 @@ export class HomeComponent implements OnInit {
   constructor(private router: Router, private service: UserService) { }
 
   ngOnInit() {
-    /*this.service.getUserProfile().subscribe(
-      res => {
-        this.userDetails = res;
-      },
-      err => {
-        console.log(err);
-      },
-    );*/
+    console.log("User verified by authorization api")
     document.body.className = "sel";
   }
   userId= localStorage.getItem("portfolioId")
